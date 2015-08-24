@@ -55,7 +55,7 @@ for (i in 1:numberOfFilesToRead) {
         #bodyCorpus = Corpus(VectorSource(getBody))
         #querieCorpus = Corpus(VectorSource(getQueries))
         
-        if (!exists("body")) {
+        if (!exists("body") | !exists("queries") | !exists("answers") | !exists("dictionary")) {
         	#superBodyCorpus <- bodyCorpus
                 #superQuestionCorpus <- querieCorpus
         	body <- vector()
